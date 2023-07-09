@@ -1,0 +1,201 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	background: #111111;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* page background video */
+video {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: matrix(50%, 50%);
+	object-fit: cover;
+	opacity: .7;
+	pointer-events: none;
+	width: 100%;
+	height: 100%;
+}
+
+/* page left and right links */
+.page_links {
+	position: relative;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+}
+.selector-link {
+	font-size: 25px;
+	top: 35px;
+	right: 65px;
+	position: absolute;
+	visibility: visible;
+	background-image: 
+    linear-gradient(to right, red,rgb(255, 0, 0),rgb(0, 0, 0),rgb(0, 0, 0),rgb(0, 0, 0),rgb(255, 0, 0),rgb(255, 0, 0), rgb(255, 0, 0)); 
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+  animation: rainbow-animation 35s linear infinite;
+	
+}
+@keyframes rainbow-animation {
+    to {
+        background-position: 150vh;
+    }
+}
+
+.selector-tx1-left {
+	font-family: Nexa;
+	font-size: 26px;
+	position: absolute;
+	z-index: 4;
+	top: 623px;
+	left: -236px;
+	width: 512px;
+	height: 40px;
+	-webkit-transform: matrix3d(0, -1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+	transform: matrix3d(0, -1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+	-webkit-transform-origin: 50% 50% 0;
+	-ms-transform-origin: 50% 50% 0;
+	transform-origin: 50% 50% 0;
+	text-align: center;
+	color: inherit;
+	letter-spacing: 4px;
+	text-indent: 4px;
+	text-transform: uppercase;
+}
+.selector-tx1-right {
+	font-family: Nexa;
+	font-size: 26px;
+	position: absolute;
+	z-index: 4;
+	top: 623px;
+	right: -236px;
+	width: 512px;
+	height: 40px;
+	-webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+	transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+	-webkit-transform-origin: 50% 50% 0;
+	-ms-transform-origin: 50% 50% 0;
+	transform-origin: 50% 50% 0;
+	text-align: center;
+	color: inherit;
+	letter-spacing: 4px;
+	text-indent: 4px;
+	text-transform: uppercase;
+}
+.selector-tx2-subtext {
+	font-family: SunlightGothic;
+	font-weight: bold;
+	font-size: 18px;
+	position: relative;
+	text-align: center;
+	color: inherit;
+	top: 6px;
+	pointer-events: none;
+	color: #fff;
+}
+.selector-bg-rollover {
+	height: 3px;
+	background: #00defd;
+	border-radius: 3px;
+	width: 128px;
+	left: 50%;
+	margin-left: -64px;
+	position: absolute;
+	top: 30px;
+	-webkit-transition: .1s ease-in-out;
+	-o-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+	opacity: 0;
+}
+.selector-con-left:hover .selector-bg-rollover, .selector-con-right:hover .selector-bg-rollover {
+	opacity: 1;
+}
+/* ========================= */
+
+/* page cafe logo link */
+.logo_link {
+	position: absolute;
+	width: auto;
+	border-radius: 50%;
+	filter: grayscale(100%);
+	z-index: 100;
+}
+.logo_link:hover {
+	filter: none;
+}
+
+/* page cafe logo img */
+.logo_link img {
+	display: block;
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+/* main page content */
+.main {
+	pointer-events: none;
+	position: absolute;
+	width: 300px;
+	top: 50%; /* here you change position of the content */
+	left: 42%; /* here you change position of the content */
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	margin: 0 auto;
+	font-weight: bold;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.main span {
+	color: white;
+	font-size: 4.5em;
+	letter-spacing: 8px;
+	animation: text 3s 1;
+}
+.main span p {
+	margin-top: 20px;
+	margin-left: 160px;
+	font-size: 0.6em;
+	color: #e25656;
+}
+
+/* this animation used on (.main span) */
+@keyframes text {
+	0% {
+		color: #353535;
+	}20% {
+		letter-spacing: 20px;
+	}80% {
+		letter-spacing: 8px;
+	}
+}
+/* ================= */
+
+/* for all mobile devicses */
+@media screen and (max-width: 768px) {
+
+	/* remove page left and right link */
+	.selector-con-left, .selector-con-right {
+		display: none;
+	}
+	.main {
+		font-size: 9px;
+		left: 46%;
+	}
+	.selector-link {
+		visibility: hidden;
+	}
+}
