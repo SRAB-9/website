@@ -124,7 +124,7 @@ video {
 	text-align: center;
 	line-height: 36px;
 	width: 240px;
-	background: #00defd;
+	background: #6f5c5c;
 	height: 36px;
 	border-radius: 36px;
 	position: absolute;
@@ -135,8 +135,8 @@ video {
 	-webkit-transition: .1s ease-in-out;
 	-o-transition: .1s ease-in-out;
 	transition: .1s ease-in-out;
-	-webkit-box-shadow: 0 10px 16px 0 rgba(0, 222, 253, .4);
-	box-shadow: 0 10px 16px 0 rgba(0, 222, 253, .4);
+	-webkit-box-shadow: 0 10px 16px 0 rgba(253, 101, 0, 0.4);
+	box-shadow: 0 10px 16px 0 rgba(135, 111, 90);
 	float: left;
 	display: none;
 	-webkit-animation-name: fadeInUp;
@@ -185,12 +185,12 @@ video {
 	text-align: center;
 	color: #fff;
 	border-radius: 44px;
-	background: #00defd;
+	background: #5a5957;
 	-webkit-transition: .1s ease-in-out;
 	-o-transition: .1s ease-in-out;
 	transition: .1s ease-in-out;
-	-webkit-box-shadow: 0 10px 16px 0 rgba(0, 222, 253, .4);
-	box-shadow: 0 10px 16px 0 rgba(0, 222, 253, .4);
+	-webkit-box-shadow: 0 10px 16px 0 rgb(124, 124, 124);
+	box-shadow: 0 10px 16px 0 rgb(189, 189, 189);
 	float: left;
 }
 
