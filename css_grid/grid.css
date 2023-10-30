@@ -20,6 +20,8 @@ a {
 	position: absolute;
 	width: auto;
 	border-radius: 50%;
+    cursor: pointer;
+	margin-left: 2%;
 	filter: grayscale(100%);
 	z-index: 100;
 }
@@ -86,7 +88,8 @@ a {
     margin-top: 5%;
     overflow-x: hidden;
     background: rgba(255, 255, 255, 0.068);
-    box-shadow: 0 5px 15px rgba(0,0,0,.7);
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+    -15px -15px 30px rgb(60, 60, 60);
     border-radius: 15px;  
 }
 .img{

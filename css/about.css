@@ -124,7 +124,7 @@ video {
 	text-align: center;
 	line-height: 36px;
 	width: 240px;
-	background: #6f5c5c;
+	background: #fbd9bd;
 	height: 36px;
 	border-radius: 36px;
 	position: absolute;
@@ -240,6 +240,8 @@ video {
 .logo_link {
 	position: absolute;
 	width: auto;
+	cursor: pointer;
+	margin-left: 2%;
 	border-radius: 50%;
 	filter: grayscale(100%);
 	z-index: 100;
