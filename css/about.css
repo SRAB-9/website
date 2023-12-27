@@ -23,6 +23,13 @@ a {
 	color: #fff;
 	text-decoration: none;
 }
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background: #fbd9bd;
+    border-radius: 5px;
+}
 
 /* page background video */
 video {
