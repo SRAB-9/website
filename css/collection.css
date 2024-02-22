@@ -4,12 +4,52 @@
 
 body {
 	height: 100vh;
-	background: #111111;
+	background: rgb(5,5,14);
 	margin: 0 auto;
 	overflow-x: hidden;
 	color: #fff;
 }
 
+/* background wave */
+.ocean { 
+	height: 15%;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #d0956b;
+  }
+  .wave {
+	background: url("../media/icons/wave.svg") repeat-x; 
+	position: absolute;
+	top: -198px;
+	width: 6400px;
+	height: 198px;
+	animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+	transform: translate3d(0, 0, 0);
+  }
+  .wave:nth-of-type(2) {
+	top: -175px;
+	animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+	opacity: 1;
+  }
+  @keyframes wave {
+	0% {
+	  margin-left: 0;
+	}
+	100% {
+	  margin-left: -1600px;
+	}
+  }
+  
+  @keyframes swell {
+	0%, 100% {
+	  transform: translate3d(0,-25px,0);
+	}
+	50% {
+	  transform: translate3d(0,5px,0);
+	}
+  }
 a {
 	text-decoration: none;
 	color: #fff;
@@ -22,19 +62,36 @@ a {
     border-radius: 5px;
 }
 
-/* page background video */
-video {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: matrix(50%, 50%);
-	object-fit: cover;
-	opacity: .7;
-	pointer-events: none;
-	width: 100%;
-	height: 100%;
+
+nav {
+    text-align: center; /* Center align the navbar */
+    position: fixed; /* Fix the navbar position */
+    top: 10px; /* Align the navbar to the top of the page */
+	left: 50%; /* Move the navbar to the center horizontally */
+    transform: translateX(-50%); /* Center the navbar */
+    width: 74%; /* Make the navbar full width */
+    font-family: "Space Grotesk";
+    z-index: 1000; /* Set a high z-index to ensure the navbar is on top of other content */
 }
+
+nav ul {
+    padding: 0;
+    margin: 0 auto; /* Center the list horizontally */
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+    font-style: bold;
+    font-size: 20px;
+    letter-spacing: 1.0px;
+    padding: 15px 30px; /* Adjust padding to make items closer and add top and bottom padding */
+}
+
+ nav li a:hover {
+	color: #f3b98f;
+	transition: all 0.4s ease 0s;
+} 
 
 /* page cafe logo link */
 .logo_link {
@@ -64,15 +121,15 @@ video {
 	position: relative;
 	width: 300px;
 	left: 50%;
-	top: 25%;
+	top: 15%;
 	transform: translate(-70%, -50%);
 }
 .welcome span { /* My */
 	align-items: center;
-	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family:"Recursive";
 	font-size: 2.8em;
 	font-weight: bold;
-	color: #e25656;
+	color: #f3b98f;
 }
 .welcome span p { /* Collections! */
 	text-indent: 20px;
@@ -86,9 +143,9 @@ video {
 
 @keyframes text {
 	0% {
-		color:#7bc1dc;
+		color:#f7dbda;
 	} 30%{
-		letter-spacing: 16px;
+		letter-spacing: 12px;
 	} 80%{
 		letter-spacing: 8px;
 	}
@@ -97,19 +154,20 @@ video {
 /* page main conetent */
 .wrapper {
     position: relative;
-	max-width: 600px;
+	max-width: 800px;
 	min-height: 400px;
 	left: 50%;
-	top: 50%;
+	top: 40%;
 	transform: translate(-50%, -50%);
-	background-color: rgb(17, 17, 17, 0.7);
-	box-shadow: 14px 14px 6px #e25656;
+	background-color: transparent;
+	
+	border-radius: 25px;
 }
 
 .wrapper .cards_container {
 	display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 	align-content: center;
     overflow: auto;
 	padding: 20px;
@@ -121,14 +179,15 @@ video {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-	max-width: 45%;
-	min-width: 45%;
-    height: 165px;
+	/* max-width: 20%;
+	min-width: 20%; */
+    height: 174px;
+	width: 204px;
     color: #dc7b7b;
     margin-bottom: 20px;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    border: 3px solid #e25656;
+    border: 3px solid #c3c3c3;
     box-shadow: 0 0 9px #4c0505;
     transform: scale(1);
     transition: .2s ease-in-out;
@@ -136,13 +195,14 @@ video {
 
 /* when you hover card */
 .cards_container .card:hover {
-	transform: scale(0.9);
+	transform: scale(0.97);
 	cursor: pointer;
 }
 
 /* card img position */
 .cards_container .card a img {
-	width: 100%;
+	width: 150%;
+	object-fit: cover;
 }
 
 /* card text content */
@@ -152,12 +212,24 @@ video {
     position: absolute;
 	padding: 0 10px;
 	color: #fff;
-    font-size: 26px;
+    font-size: 20px;
     text-align: center;
     border-radius: 8px;
 	bottom: 10px;
 }
-
+.info {
+	font-size: 3.0rem;
+	font-family: "Space Grotesk";
+	margin-right: auto;
+	align-items: center;
+}
+.Projects-container {
+	display:inline-block;
+	width:100%;
+	height:auto;
+	margin-left: -10px;
+	margin-right: -10px;
+}
 /* for all mobile devicses */
 @media screen and (max-width: 768px) {
 	.welcome {
@@ -172,7 +244,7 @@ video {
 	}
 
 	.wrapper {
-		top: 60%;
+		top: 50%;
 	}
 
 	.wrapper .cards_container {
@@ -182,4 +254,7 @@ video {
 	.cards_container .card {
 		min-width: 100%;
 	}
+	nav {
+        display: none; /* Hide the navbar for tablets and phones */
+    }
 }

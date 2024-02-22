@@ -1,0 +1,260 @@
+@font-face {
+	font-family: SFProDisplay-Bold;
+	src: url('/lib/font/SFProDisplay-Bold.woff') format('woff');
+}
+
+ html, body{
+	width: 100%;
+  	height: 100%;
+	/* background: #111111; */
+	background: rgb(5,5,14);
+	background: linear-gradient(90deg, rgba(5,5,14,1) 0%, rgba(17,17,17,1) 100%);
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	color: #f7dbda;
+}
+body {
+	min-height: 100%;
+}
+
+/* background wave */
+.ocean { 
+  height: 15%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #d0956b;
+}
+.wave {
+  background: url("../media/icons/wave.svg") repeat-x; 
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background: #fbd9bd;
+    border-radius: 5px;
+}
+
+.main_content {
+    /* border: 1px solid red; */
+    position: relative;
+    z-index: 4;
+    top: 400px;
+    max-width: 1000px;
+    margin: 0 auto;
+    opacity: 0; /* initially set opacity to 0 */
+    animation: fadeIn 3s forwards; /* Animation to fade in */
+}
+
+/* Animation to fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.howdy {
+	font-size: 3.0rem;
+	font-family: "Space Grotesk";
+	color: #f3b98f;
+}
+.about-con-content {
+	top: 40ch;
+	left: 0;
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+	min-height: 380px;
+	-webkit-animation-name: fadeInRight;
+	animation-name: fadeInRight;
+}
+
+.about-tx2-content {
+	font-family: "Recursive";
+	font-size: 19px;
+	line-height: 32px;
+}
+
+.about-con-contact {
+	background: red;
+	width: 100%;
+	margin-top: 36px;
+	margin-bottom: -50px;
+}
+
+.about-btn-contact {
+	font-family: "Space Grotesk";
+	font-size: 20px;
+	line-height: 36px;
+	position: relative;
+	width: 100px;
+	height: 36px;
+	padding-top: 4px;
+	padding-right: 10px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+	cursor: pointer;
+	-webkit-animation-name: fadeInRight;
+	animation-name: fadeInRight;
+	text-align: center;
+	color: #fff;
+	border-radius: 44px;
+	background: #5a5957;
+	-webkit-transition: .1s ease-in-out;
+	-o-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+	-webkit-box-shadow: 0 10px 16px 0 #5a5957;
+	box-shadow: 0 10px 16px 0 #5a5957;
+	float: left;
+}
+
+.about-btn-contact:hover {
+	-webkit-transform: scale(.97);
+	-ms-transform: scale(.97);
+	transform: scale(.97);
+	color: #fff;
+	background: #0BE881;
+	-webkit-box-shadow: 0 10px 16px 0 rgba(11, 232, 129, .4);
+	box-shadow: 0 10px 16px 0 rgba(11, 232, 129, .4);
+}
+
+.social-con-container {
+	height: 44px;
+	width: auto;
+	position: relative;
+	color: #fbd9bd;
+	margin-left: 12px;
+	float: left;
+	z-index: 100;
+}
+
+.social-btn-website {
+	background-size: 32px !important;
+	height: 54px;
+	width: 54px;
+	margin-right: 10px;
+	float: left;
+	position: relative;
+	border-radius: 100%;
+	-webkit-box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.1);	
+	-webkit-animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
+	-webkit-transition: .1s ease-in-out;
+	-o-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+}
+
+.social-btn-website:hover {
+	-webkit-transform: scale(.9);
+	-ms-transform: scale(.9);
+	transform: scale(.9);
+}
+
+/* page cafe logo link */
+.logo_link {
+    display: inline-block; /* Make the logo link inline-block */
+    position: relative;
+    width: auto;
+    cursor: pointer;
+    margin-left: 20px; /* Adjust margin-left as needed */
+    border-radius: 50%;
+    filter: grayscale(100%);
+    z-index: 100;
+}
+.logo_link:hover {
+    filter: none;
+}
+
+/* page cafe logo img */
+.logo_link img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* for all mobile devicses */
+@media screen and (max-width: 1100px) {
+	body {
+		font-size: 12px;
+	}
+	.main_content {
+		border: 2px transparent;
+		border-radius: 25px;
+		top: -15%;
+		max-width: 600px;
+		padding-top: 250px;
+	}
+
+	/* .about-con-credits {
+		display: block;
+	} */
+
+	.about-con-content {
+		width: 80%;
+		margin-left: 10%;
+		min-height: 280px;
+	}
+
+	.about-btn-contact {
+		margin-bottom: 40px;
+	}
+
+	.about-tx2-content {
+		font-size: 18px;
+		line-height: 29px;
+	}
+
+	.social-con-container {
+		float: right;
+	}
+
+	.mobile_nav > * {
+		box-sizing: border-box;
+	}
+	.mobile_nav .menu-down a {
+		font-size: 1.4em;
+	}
+
+}

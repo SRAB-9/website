@@ -10,50 +10,51 @@
     <meta name="author" content="SRAB" />
     <meta name="copyright" content="SRAB" />
     <!-- page icon for all devices -->
-    <link rel="icon" type="image/png" href="./media/icons/cafe-16.gif" sizes="16x16" />
-    <link rel="icon" type="image/png" href="./media/icons/cafe-32.gif" sizes="32x32" />
-    <link rel="icon" type="image/png" href="./media/icons/cafe-96.gif" sizes="96x96" />
-    <link rel="icon" type="image/png" href="./media/icons/cafe-128.gif" sizes="128x128" />
-    <link rel="icon" type="image/png" href="./media/icons/cafe-196.gif" sizes="196x196" />
+    <link rel="icon" type="image/png" href="../media/icons/cafe-16.gif" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../media/icons/cafe-32.gif" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../media/icons/cafe-96.gif" sizes="96x96" />
+    <link rel="icon" type="image/png" href="../media/icons/cafe-128.gif" sizes="128x128" />
+    <link rel="icon" type="image/png" href="../media/icons/cafe-196.gif" sizes="196x196" />
     <!-- page icon for all iphone devices -->
-    <link rel="apple-touch-icon" href="./media/icons/cafe.gif" sizes="57x57" />
-    <link rel="apple-touch-icon" href="./media/icons/cafe.gif" sizes="60x60" />
-    <link rel="apple-touch-icon" href="./media/icons/cafe.gif" sizes="72x72" />
-    <link rel="apple-touch-icon" href="./media/icons/cafe.gif" sizes="76x76" />
-    <link rel="apple-touch-icon" href="./media/icons/cafe.gif" sizes="114x114" />
-    <link rel="apple-touch-icon" href="./media/icons/cafe.gif" sizes="120x120" />
-    <link rel="apple-touch-icon" href="./media/icons/cafe.gif" sizes="144x144" />
-    <link rel="apple-touch-icon" href="./media/icons/cafe.gif" sizes="152x152" />
-    <!-- css files -->
+    <link rel="apple-touch-icon" href="../media/icons/cafe.gif" sizes="57x57" />
+    <link rel="apple-touch-icon" href="../media/icons/cafe.gif" sizes="60x60" />
+    <link rel="apple-touch-icon" href="../media/icons/cafe.gif" sizes="72x72" />
+    <link rel="apple-touch-icon" href="../media/icons/cafe.gif" sizes="76x76" />
+    <link rel="apple-touch-icon" href="../media/icons/cafe.gif" sizes="114x114" />
+    <link rel="apple-touch-icon" href="../media/icons/cafe.gif" sizes="120x120" />
+    <link rel="apple-touch-icon" href="../media/icons/cafe.gif" sizes="144x144" />
+    <link rel="apple-touch-icon" href="../media/icons/cafe.gif" sizes="152x152" />
+    <!-- css files & Fonts-->
     <link rel="stylesheet" href="./css/collection.css">
 	<link rel="stylesheet" href="./css/mobile.css" />
-    <link rel="stylesheet" href="https://bootswatch.com/5/quartz/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Recursive' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
     <!-- javascript files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
     <script type="text/javascript" src="./js/mobile.js" defer></script>
  </head>
  <body>
-    <!-- page background video -->
-    <video muted loop src="./media/videos/pexels-.mp4" autoplay></video>
-
-    <!-- website cafe logo -->
-    <a class="logo_link" target="_self" href="./">
-        <img src="./media/icons/cafe.gif">
-    </a>
-
-    <!-- navbar for mobile devices -->
-    <div class="mobile_nav">
-        <a class="nav-toggle">
-            <span></span><span></span><span></span>
-        </a>
-        <ul class="menu-down">
-            <li><a target="_self" href="./">[ HOME ]</a></li>
-            <li><a target="_self" href="./collection.html">Collections</a></li>
-            <li><a target="_self" href="./about.html">About</a></li>
-            <li><a target="_self" href="./css_grid/library.html">Gallery</a></li>
-            <li><a target="_self" href="./terminal/index.html">Terminal</a></li>
-        </ul>
-    </div>
+    <!-- background wave -->
+	<div class="ocean">
+		<div class="wave"></div>
+		<div class="wave"></div>
+	</div>
+    <header>
+		<!-- website cafe logo -->
+	<a class="logo_link" target="_self" href="./">
+		<img src="../media/icons/cafe.gif">
+	</a>
+		<!-- navbar for mobile devices -->
+        <div class="mobile_nav">
+            <a class="nav-toggle">
+                <span></span><span></span><span></span>
+            </a>
+            <ul class="menu-down">
+                <li><a target="_self" href="./">Home</a></li>
+                <li><a target="_self" href="./collection.html">Collections</a></li>
+            </ul>
+        </div>
+	</header>
 
     <!-- page welcome message -->
     <div class="welcome">
@@ -65,7 +66,7 @@
 
         <div class="cards_container">
             <div class="card" title="Best Screenshots">
-                <a target="_self" href="./css_grid/library.html">
+                <a target="_self" href="./library.html">
                     <!-- change card images here -->
                     <img src="https://steamuserimages-a.akamaihd.net/ugc/1482200421114827112/C8129912ED66B9D74DF4E66BBBA13E77C6799F63/?imw=1024&imh=576&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
                 </a>
@@ -75,7 +76,7 @@
             <div class="card" title="My Blender Projects">
                 <a target="_self" href="https://www.instagram.com/_s1nx/">
                     <!-- change card images here -->
-                    <img src="media/images/image_processing20200414-9477-wuseiw.gif">
+                    <img src="media/icons/image_processing20200414-9477-wuseiw.gif">
                 </a>
                 <!-- change text content here -->
                 <span>Blender</span>
@@ -86,15 +87,7 @@
                     <img src="https://i.ytimg.com/vi/B04sWppwYIo/maxresdefault.jpg">
                 </a>
                 <!-- change text content here -->
-                <span>Hardware</span>
-            </div>
-            <div class="card" title="Terminal page">
-                <a target="_self" href="./terminal/index.html">
-                    <!-- change card images here -->
-                    <img src="media/images/photosd.png">
-                </a>
-                <!-- change text content here -->
-                <span>Terminal page</span>
+                <span>My Build</span>    
             </div>
         </div>
     </div>
